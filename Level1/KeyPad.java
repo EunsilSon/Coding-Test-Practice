@@ -103,7 +103,7 @@ public class KeyPad {
 
     public int distance(ArrayList<Node> keyPad, int key, int hand) {
         int result;
-        int keyX, keyY, handX, handY, distanceX, distanceY, x1, x2, y1, y2;
+        int keyX, keyY, handX, handY, x1, x2, y1, y2;
 
         // 키의 좌표 값
         keyX = keyPad.get(key-1).x;
@@ -117,16 +117,12 @@ public class KeyPad {
         y1 = keyY > handY ? keyY : handY;
         y2 = keyY < handY ? keyY : handY;
 
-        distanceX = x1 - x2;
-        distanceY = y1 - y2;
-
-        result = distanceX + distanceY;
+        result = (x1 - x2) + (y1 - y2);
 
         return result;
     }
 
     public static void main(String[] args) {
-
         KeyPad keyPad = new KeyPad();
 
         int[] numbers = { 7, 0, 8, 2, 8, 3, 1, 5, 7, 6, 2 }; // LRLLRRLLLRR
