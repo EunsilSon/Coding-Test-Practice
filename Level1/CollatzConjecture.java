@@ -1,5 +1,5 @@
 public class CollatzConjecture {
-    public static int Collatz(long num) {
+    public static int collatz(long num) {
         int count = 0;
 
         while (!(num == 1)) {
@@ -17,6 +17,8 @@ public class CollatzConjecture {
     }
 
     public static void main(String[] args) {
-        System.out.println(Collatz(626331)); // -1
+        System.out.println(collatz(6)); // 4
+        System.out.println(collatz(16)); // 8
+        System.out.println(collatz(626331)); // -1
     }
 }
